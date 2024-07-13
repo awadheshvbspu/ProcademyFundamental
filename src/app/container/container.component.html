@@ -1,0 +1,60 @@
+<!-- <p>Name: iPhone</p>
+<p>Price: $999</p>
+<p>Color: Matte black</p>
+<p>Discounted Price: $798</p> -->
+<!-- <p>Name: {{name}}</p>
+<p>Price: ${{price}}</p>
+<p>Color: {{color}}</p> -->
+<!-- <img src={{product.pImage}} alt="" height="250" width="200"> -->
+<div class="ekart--product-container">
+    <!-- <img [src]="product.pImage" alt="" height="250" width="200">
+
+<p>name: {{product.name}}</p>
+<p>Price: ${{product.price}}</p>
+<p>Color: {{product.color}}</p>
+<p>Discounted Price: {{getDiscountedPrice().toFixed(2)}}</p>
+<p>{{product.inStock>0 ? 'Only' + product.inStock + 'item left' : 'Not in stock'}}</p> -->
+    <!-- <button [disabled]="!(product.inStock>0)" class="btn btn-primary">Buy Now</button> -->
+    <!-- <button (click)="decrementCartValue()">-</button>
+<span>{{addToCart}}</span>
+<button (click)="incrementCartValue()">+</button> -->
+    <!-- <input type="text" [value]="name"> -->
+    <!-- <input type="text" bind-value="name" [attr.aria-hidden]=""> -->
+    <!-- <input type="text" [value]="name" (input)="onNameChange($event)"> -->
+    <!-- <p>name:{{name}}</p> -->
+    <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+    <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
+    <app-product-detail *ngIf="productListComponent.selectedProduct"
+        [productListComp]="productListComponent"></app-product-detail>
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-product-heading">
+            <h1>Latest Arrival in Popular Brands</h1>
+        </div>
+       <app-featured-brands>
+        <h3 class="title">New Arrival in Nike</h3>
+    <button class="call-to-action">Show New Arrival in Nike</button>
+
+       </app-featured-brands>
+       <app-featured-brands>
+    <h3 class="title">New Arrival in Adidas</h3>
+    <button class="call-to-action">Show New Arrival in Nike</button>
+
+</app-featured-brands>
+<app-featured-brands>
+    <h3 class="title">New Arrival in Reebok</h3>
+    <button class="call-to-action">Show New Arrival in Nike</button>
+
+</app-featured-brands>
+</div>
+</div>
+
+
+     
+    
+<!-- <div *ngFor="let  item of listOfString">
+<p>Current element of the array is:{{item}}</p>
+</div>
+</div> -->
+
+
+<!-- disabled, Hidden, Checked -->

@@ -1,0 +1,141 @@
+<!-- <app-top-header></app-top-header>
+<app-header></app-header>
+<app-container></app-container> -->
+
+<!-- concept of ViewChildren -->
+<!-- <div class="input-container">
+    <input type="text" placeholder="First Name" #inputEl>
+    <br><br>
+    <input type="text" placeholder="Middle Name" #inputEl>
+    <br><br>
+    <input type="text" placeholder="Last Name" #inputEl>
+    <button (click)="show()">Show Full Name</button>
+    <h3>{{fullName}}</h3>
+  </div> -->
+
+<!-- <app-ng-template></app-ng-template> -->
+
+
+<!-- concept of ng container  -->
+<!-- <ng-container *ngIf="toggle; else toggleOff">
+  <p>This toggle is on </p>
+  </ng-container>
+  <ng-template #toggleOff>
+    <p>This toggle is off </p>
+    </ng-template>
+  <button (click)="onToggle()">Toggle</button> -->
+
+<!-- concept of content-child and content-children -->
+<!-- <app-parent></app-parent> -->
+
+<!--concept component initialization life cycle -->
+
+<!-- <div class="container">
+    <input type="text" #inputEl (focus)="0" class="input_box">
+    <button (click)="onBtnClicked(inputEl)">Submit</button>
+    <app-demo [message]="inputVal" *ngIf="!toDestroy">
+        <p #temp>User has entered following text: {{ inputVal }}</p>
+    </app-demo>
+    <br><br>
+    <button (click)="DestroyComponent()">Show / Hide</button>
+</div> -->
+
+<!-- concept of custom class style directive -->
+
+<!-- <h2>Custom Class & Style Directive</h2>
+<div appClass [appClass]="{'app-container':true, appHighlight:true,appFont:5>2}">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, repellendus beatae sapiente laborum aliquam eum voluptate odit iste! Sint veniam quas tempora cupiditate odio, sequi voluptate rem obcaecati suscipit rerum!</p>
+</div>
+
+<h2>Custom Class & Style Directive</h2>
+<div class="app-container" [ngStyle]="{backgroundColor:active ? 'green':'red', color:active? 'white': 'black'}">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, repellendus beatae sapiente laborum aliquam eum voluptate odit iste! Sint veniam quas tempora cupiditate odio, sequi voluptate rem obcaecati suscipit rerum!</p>
+</div>
+<h2>Custom Class & Style Directive</h2>
+<div class="app-container" [appStyle]="{backgroundColor: active ? 'green':'red', color:active ? 'white' :'black'}">
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, repellendus beatae sapiente laborum aliquam eum voluptate odit iste! Sint veniam quas tempora cupiditate odio, sequi voluptate rem obcaecati suscipit rerum!</p>
+</div> -->
+
+<!-- concept of structural directive -->
+
+<!-- <div class="notice-container">
+  <div class="notice-header">
+    <button (click)="displayTermsofServices()" class="add">+</button>
+  </div>
+  <div class="notice-info">
+    <p>Read terms of services and privacy policy</p>
+  </div> -->
+  <!-- <ng-template [ngIf]="display" [ngIfElse]="myTempVar" > -->
+    <!-- <div class="notice-body" *ngIf="display; else myTempVar" > -->
+    <!-- <div class="notice-body" *appIf="display">
+
+      <h1>Terms of services & privacy policy</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+        quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+        necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+        labore esse dolor!</p>
+      <h2>Terms of services</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+        quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+        necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+        labore esse dolor!</p>
+      <h2>privacy policy</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+        quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+        necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+        labore esse dolor!</p>
+    </div> -->
+  <!-- </ng-template>
+  <ng-template #myTempVar>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+      quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+      necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+      labore esse dolor!</p>
+  </ng-template> -->
+  <!-- <p *appIf="10<5">This is a demo paragraph</p> -->
+<!-- </div> -->
+
+<!-- conscept of ngSwitch directive -->
+<div class="notice-container">
+  <div class="notice-header">
+    <p (click)="onInfoClick()">Info</p>
+    <p (click)="onServiceClicked()">Service</p>
+    <p (click)="onPrivacyClicked()">Privacy</p>
+    <p (click)="onUserClicked()">User Agreement</p>
+  </div>
+  <div class="notice-info">
+    <p>Read terms of services and privacy policy</p>
+  </div>
+    <div class="notice-body" [ngSwitch]="tab">
+
+      <!-- <div *ngSwitchCase="'info'"> -->
+      <div *ngSwitchDefault>
+
+        <h1>Terms of services & privacy policy</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+        quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+        necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+        labore esse dolor!</p>
+      </div>
+     <div *ngSwitchCase="'services'">
+      <h2>Terms of services</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+        quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+        necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+        labore esse dolor!</p>
+     </div>
+      <div *ngSwitchCase="'policy'">
+        <h2>privacy policy</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+        quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+        necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+        labore esse dolor!</p>
+      </div>
+        <div *ngSwitchCase="'user'">
+          <h2>User Agreement</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tenetur tempore est quam odio? Necessitatibus soluta
+          quas dicta non! Ad odit porro placeat ipsam eum praesentium. Saepe autem dicta nam omnis architecto nemo quisquam,
+          necessitatibus iste iusto corrupti explicabo sed? Numquam dicta optio maxime voluptatum accusantium. Eligendi
+          labore esse dolor!</p>
+        </div>
+    </div>
